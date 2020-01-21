@@ -1,0 +1,53 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  
+  &__picture {
+    background: thistle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 70px);
+    width: 100%;
+  }
+
+  &__text {
+    background: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+  }
+
+  &__paragraph {
+    max-width: 50%;
+    text-align: center;
+  }
+  
+  &__links {
+    background: greenyellow;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+
+    &--type {
+      background: red;
+      height: 25px;
+      width: 25px;
+      border-radius: 999px;
+    }
+  }
+
+  &__image {
+    height: 150px;
+    width: 150px;
+    background: green;
+    border-radius: 999px;
+  }
+}
