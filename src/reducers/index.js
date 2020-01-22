@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import counter from './counter';
+import showProjects from './showProjects';
 
 
 const rootReducer = combineReducers({
-  counter
+  showProjects
 });
 
 export default rootReducer;

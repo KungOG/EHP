@@ -1,16 +1,17 @@
 import React from 'react';
-/* import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from '../../actions'; */
+import { useSelector, useDispatch } from 'react-redux';
+import { showProjects } from '../../actions';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import Profile from '../Profile/Profile';
 
 const Modal = () => {
-  /* const counter = useSelector(state => state.counter);
+  const show = useSelector(state => state.show);
   const dispatch = useDispatch();
 
-  {counter}
-  <button onClick={ () => dispatch(increment()) }>+</button>
-  <button  onClick={ () => dispatch(decrement()) }>-</button> */
+  const showProjects = () => {
+    console.log('Aktivera');
+    dispatch(showProjects())
+  }
 
   return (
     <div className="modal">
@@ -18,7 +19,8 @@ const Modal = () => {
        <Profile />
       </div>
       <div className="modal__bottom">
-        <ProjectCard />
+        <button className="modal__button" onClick={ () => { showProjects() } }>Show Projects</button>
+        <ProjectCard className={ show ? '-active' : '' } />
       </div>
     </div>
   );
