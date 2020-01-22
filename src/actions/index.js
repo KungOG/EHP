@@ -1,11 +1,5 @@
-export const increment = () => {
+export const showProject = () => {
   return {
-    type: 'INCREMENT'
-  };
-}
-
-export const decrement = () => {
-  return {
-    type: 'DECREMENT'
+    type: 'TOGGLE_PROJECT'
   };
 }
