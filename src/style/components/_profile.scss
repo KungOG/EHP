@@ -10,21 +10,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100% - 70px);
+    height: calc(100% - 80px);
     width: 100%;
   }
 
   &__text {
     background: teal;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 200px;
     width: 100%;
   }
 
+  &__name {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  &__work {
+    margin-top: 0;
+    font-size: 16px;
+  }
+
   &__paragraph {
     max-width: 50%;
+    font-size: 12px;
     text-align: center;
   }
   
@@ -45,8 +57,8 @@
   }
 
   &__image {
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width: 120px;
     background: green;
     border-radius: 999px;
   }
