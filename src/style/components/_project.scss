@@ -1,9 +1,16 @@
 .project {
   background: grey;
-  display: flex;
+  display: block;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 0;
+  transition: height 1s;
+
+  &.-active {
+    height: 100%;
+    display: flex;
+    position: relative;
+  }
 }

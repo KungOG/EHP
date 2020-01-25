@@ -10,7 +10,7 @@ const Modal = () => {
 
   const showProjects = () => {
     console.log('Aktivera');
-    dispatch(showProjects())
+    //dispatch(showProjects())
   }
 
   return (

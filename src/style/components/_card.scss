@@ -1,5 +1,41 @@
 .card {
-  height: 75px;
+  height: 65px;
   width: 100%;
   background: goldenrod;
+
+  &:hover {
+    background: red;
+    transform: perspective(10px);
+    transform: scaleX(1.05);
+    transition: transform .2s;
+  }
+
+  &.-activeCard {
+    height: 300px;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    background: darkgoldenrod;
+    transition: top 1s;
+
+    .card__content {
+      display: block;
+    }
+  }
+
+  &__name {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &__content {
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    display: none;
+  }
+
+  &__link {
+    color: white;
+  }
 }

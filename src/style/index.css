@@ -31,9 +31,7 @@
 
 .project {
   background: grey;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -45,13 +43,65 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  height: 0;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+.project.-active {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
 }
 
 .card {
-  height: 75px;
+  height: 65px;
   width: 100%;
   background: goldenrod;
+}
+
+.card:hover {
+  background: red;
+  -webkit-transform: perspective(10px);
+          transform: perspective(10px);
+  -webkit-transform: scaleX(1.05);
+          transform: scaleX(1.05);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.card.-activeCard {
+  height: 300px;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  background: darkgoldenrod;
+  -webkit-transition: top 1s;
+  transition: top 1s;
+}
+
+.card.-activeCard .card__content {
+  display: block;
+}
+
+.card__name {
+  font-size: 24px;
+  text-align: center;
+}
+
+.card__content {
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  display: none;
+}
+
+.card__link {
+  color: white;
 }
 
 .profile {
