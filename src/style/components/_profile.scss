@@ -4,9 +4,8 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  
+
   &__picture {
-    background: thistle;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +14,6 @@
   }
 
   &__text {
-    background: teal;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,6 +25,7 @@
   &__name {
     margin: 0;
     font-size: 24px;
+    color: red;
   }
 
   &__work {
@@ -35,31 +34,29 @@
   }
 
   &__paragraph {
-    max-width: 50%;
+    max-width: 70%;
     font-size: 12px;
     text-align: center;
   }
-  
+
   &__links {
-    background: greenyellow;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 50px;
     width: 100%;
 
-    &--type {
-      background: red;
+    &--type > a {
       height: 25px;
       width: 25px;
       border-radius: 999px;
+      color: red;
     }
   }
 
   &__image {
     height: 120px;
     width: 120px;
-    background: green;
     border-radius: 999px;
   }
 }
