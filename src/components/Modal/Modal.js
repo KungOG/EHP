@@ -1,29 +1,28 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { showProjects } from '../../actions';
-import ProjectCard from '../ProjectCard/ProjectCard';
-import Profile from '../Profile/Profile';
+import React, { useState } from "react";
+import ProjectCard from "../ProjectCard/ProjectCard";
+import Profile from "../Profile/Profile";
+import Button from "../Button/Button";
 
 const Modal = () => {
-  const show = useSelector(state => state.show);
-  const dispatch = useDispatch();
+  const [active, setActive] = useState(false);
 
   const showProjects = () => {
-    console.log('Aktivera');
-    //dispatch(showProjects())
-  }
+    if (active === true) setActive(false);
+    if (active === false) setActive(true);
+  };
+  console.log(active);
 
   return (
     <div className="modal">
       <div className="modal__top">
-       <Profile />
+        <Profile />
       </div>
       <div className="modal__bottom">
-        <button className="modal__button" onClick={ () => { showProjects() } }>Show Projects</button>
-        <ProjectCard className={ show ? '-active' : '' } />
+        <Button handleClick={showProjects} isActive={active} />
+        <ProjectCard isActive={active} />
       </div>
     </div>
   );
-}
+};
 
 export default Modal;

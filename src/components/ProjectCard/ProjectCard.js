@@ -1,10 +1,9 @@
-import React from 'react';
-import Card from '../Card/Card';
+import React from "react";
+import Card from "../Card/Card";
 
-const ProjectCard = () => {
-
+const ProjectCard = ({ isActive }) => {
   return (
-    <div className="project">
+    <div className={[`project ${isActive ? "-active" : ""}`]}>
       <Card />
       <Card />
       <Card />
@@ -12,6 +11,6 @@ const ProjectCard = () => {
       <Card />
     </div>
   );
-}
+};
 
 export default ProjectCard;

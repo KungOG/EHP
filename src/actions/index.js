@@ -1,5 +1,5 @@
 export const showProject = () => {
   return {
-    type: 'TOGGLE_PROJECT'
+    type: "TOGGLE_PROJECT"
   };
-}
+};

@@ -7,16 +7,16 @@
     background: red;
     transform: perspective(10px);
     transform: scaleX(1.05);
-    transition: transform .2s;
+    transition: transform 0.2s;
   }
 
   &.-activeCard {
-    height: 300px;
+    height: 100%;
     position: absolute;
     top: 0;
     z-index: 10;
     background: darkgoldenrod;
-    transition: top 1s;
+    transition: top 10s;
 
     .card__content {
       display: block;
@@ -24,6 +24,11 @@
   }
 
   &__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 65px;
     font-size: 24px;
     text-align: center;
   }

@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
 
 const Profile = () => {
-
   return (
     <div className="profile">
       <div className="profile__picture">
@@ -11,8 +10,8 @@ const Profile = () => {
         <h1 className="profile__name">Namn Namnsson</h1>
         <h2 className="profile__work">Yrke Yrke Yrke</h2>
         <div className="profile__paragraph">
-        "Lorem ipsum yadhe yadhelr hadjaeu eyadehehe yueha
-        Lorem ipsum yadhe yadhelr hadjaeu eyadehehe yuehas"
+          "Lorem ipsum yadhe yadhelr hadjaeu eyadehehe yueha Lorem ipsum yadhe
+          yadhelr hadjaeu eyadehehe yuehas"
         </div>
       </div>
       <div className="profile__links">
@@ -23,6 +22,6 @@ const Profile = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Profile;
