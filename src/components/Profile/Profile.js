@@ -1,13 +1,18 @@
 import React from "react";
-import Image from "../../img/image.jpg";
+import PropTypes from "prop-types";
 
-const Profile = () => {
+const Profile = (props) => {
+  const { ProfilePicture } = props;
+
+  console.log(ProfilePicture);
+
   return (
     <div className="profile">
       <div className="profile__picture">
-        <div className="profile__image">
-          <img src={Image} alt="" />
-        </div>
+        <div
+          className="profile__image"
+          style={{ backgroundImage: `${ProfilePicture}` }}
+        />
       </div>
       <div className="profile__text">
         <h1 className="profile__name">Oscar Gustafsson</h1>
@@ -57,6 +62,10 @@ const Profile = () => {
       </div>
     </div>
   );
+};
+
+Profile.propTypes = {
+  ProfilePicture: PropTypes.string,
 };
 
 export default Profile;
