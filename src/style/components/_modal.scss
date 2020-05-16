@@ -1,10 +1,10 @@
 .modal {
-  background: white;
+  background: $color_white;
   display: flex;
   flex-direction: column;
   padding: 5px;
   border-radius: 5px;
-  height: 500px;
+  height: 415px;
   width: 290px;
 
   &__top {
@@ -18,13 +18,73 @@
   }
 
   &__button {
-    background: white;
+    background: $color_white;
     border: 0;
     width: 100%;
+    padding: 0;
+    margin-top: 10px;
 
-    &.-spinn {
-      transform: rotatex(180deg);
-      transition: transform 0.5s cubic-bezier(0.7, 0.15, 0.81, 0.26);
+    > span {
+      width: 100%;
+      color: $color_red;
+      line-height: 23px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    &.-inactive {
+      span {
+        opacity: 1;
+        position: relative;
+        text-align: center;
+        letter-spacing: 1px;
+        display: inline-block;
+        text-transform: uppercase;
+        animation: activeOpacityButton 0.5s linear forwards;
+
+        &:hover {
+          &:after {
+            opacity: 1;
+            transform: translateY(0) rotateX(0);
+          }
+
+          &:before {
+            opacity: 0;
+            transform: translateY(50%) rotateX(90deg);
+          }
+        }
+
+        &::after {
+          top: 0;
+          left: 0;
+          opacity: 0;
+          width: 100%;
+          color: #323237;
+          display: block;
+          transition: $speed;
+          position: absolute;
+          content: attr(data-back);
+          transform: translateY(-50%) rotateX(90deg);
+        }
+
+        &::before {
+          top: 0;
+          left: 0;
+          opacity: 1;
+          color: #adadaf;
+          display: block;
+          line-height: 23px;
+          transition: $speed;
+          position: relative;
+          content: attr(data-front);
+          transform: translateY(0) rotateX(0);
+        }
+      }
+    }
+
+    &.-active {
+      animation: activeOpacityButton 0.65s linear forwards;
     }
   }
 }

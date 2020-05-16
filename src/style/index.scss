@@ -1,3 +1,5 @@
+@import "./utilities/variables";
+
 @import "./components/modal";
 @import "./components/project";
 @import "./components/card";
@@ -5,15 +7,11 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: $primaryFont, $secondaryFont;
 }
 
 .App {
-  background: black;
+  background: $color_black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,6 +30,12 @@ body {
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+}
+
+i {
+  position: relative;
+  transition: all 0.25s ease;
+  color: $color_red;
 }
 
 ::-webkit-scrollbar {

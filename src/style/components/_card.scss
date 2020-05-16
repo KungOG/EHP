@@ -1,10 +1,10 @@
 .card {
   height: 65px;
   width: 100%;
-  background: goldenrod;
+  background: $color_gold;
 
   &:hover {
-    background: red;
+    background: $color_red;
     transform: perspective(10px);
     transform: scaleX(1.05);
     transition: transform 0.2s;
@@ -14,9 +14,12 @@
     height: 100%;
     position: absolute;
     top: 0;
+    left: 0;
     z-index: 10;
-    background: darkgoldenrod;
+    background: $color_gold;
     transition: top 10s;
+    border: transparent;
+    margin-bottom: 3px;
 
     .card__content {
       display: block;

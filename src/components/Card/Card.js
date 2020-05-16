@@ -1,19 +1,29 @@
 import React from "react";
 
-const Card = () => {
+const Card = (props) => {
+  const {
+    active,
+    handleClick,
+    ProjectName,
+    ProjectContent,
+    ProjectLink,
+    ProjectTag,
+  } = props;
+
+  console.log(active, "<--ActiveCard");
   return (
-    <div className="card">
-      <h1 className="card__name">Project Name</h1>
+    <button
+      onClick={handleClick}
+      className={[`card ${active ? "-activeCard" : ""}`]}
+    >
+      <h1 className="card__name">{ProjectName}</h1>
       <div className="card__content">
-        <p>
-          "Lorem ipsum yadhe yadhelr hadjaeu eyadehehe yueha Lorem ipsum yadhe
-          yadhelr hadjaeu eyadehehe yuehas"
-        </p>
-        <a className="card__link" href="#">
-          Link to your project
+        <p>{ProjectContent}</p>
+        <a className="card__link" href={ProjectLink}>
+          {ProjectTag}
         </a>
       </div>
-    </div>
+    </button>
   );
 };
 

@@ -12,7 +12,6 @@ const Modal = () => {
     if (active === true) setActive(false);
     if (active === false) setActive(true);
   };
-  console.log(active);
 
   const backgroundImage =
     { Image } === true ? `url('${Image}')` : `url('${LogoType}')`;
