@@ -7,11 +7,7 @@
   height: 415px;
   width: 290px;
 
-  &__top {
-    width: 100%;
-    height: 100%;
-  }
-
+  &__top,
   &__bottom {
     width: 100%;
     height: 100%;
@@ -19,7 +15,8 @@
 
   &__button {
     background: $color_white;
-    border: 0;
+    outline: none;
+    border: none;
     width: 100%;
     padding: 0;
     margin-top: 10px;
@@ -29,7 +26,7 @@
       color: $color_red;
       line-height: 23px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-align: center;
     }
 
@@ -37,8 +34,6 @@
       span {
         opacity: 1;
         position: relative;
-        text-align: center;
-        letter-spacing: 1px;
         display: inline-block;
         text-transform: uppercase;
         animation: activeOpacityButton 0.5s linear forwards;
@@ -55,27 +50,27 @@
           }
         }
 
-        &::after {
+        &::after,
+        &::before {
           top: 0;
           left: 0;
+          display: block;
+          line-height: 23px;
+          transition: $speed;
+        }
+
+        &::after {
           opacity: 0;
           width: 100%;
           color: #323237;
-          display: block;
-          transition: $speed;
           position: absolute;
           content: attr(data-back);
           transform: translateY(-50%) rotateX(90deg);
         }
 
         &::before {
-          top: 0;
-          left: 0;
           opacity: 1;
           color: #adadaf;
-          display: block;
-          line-height: 23px;
-          transition: $speed;
           position: relative;
           content: attr(data-front);
           transform: translateY(0) rotateX(0);

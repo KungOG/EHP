@@ -2,11 +2,13 @@
   height: 65px;
   width: 100%;
   background: $color_gold;
+  border: transparent;
+  outline: none;
+  margin-bottom: $space_xxxSmall;
 
   &:hover {
     background: $color_red;
-    transform: perspective(10px);
-    transform: scaleX(1.05);
+    transform: scaleX(1.05) perspective(10px);
     transition: transform 0.2s;
   }
 
@@ -18,8 +20,6 @@
     z-index: 10;
     background: $color_gold;
     transition: top 10s;
-    border: transparent;
-    margin-bottom: 3px;
 
     .card__content {
       display: block;
@@ -32,18 +32,18 @@
     align-items: center;
     margin: 0;
     height: 65px;
-    font-size: 24px;
+    font-size: $font_medium;
     text-align: center;
   }
 
   &__content {
-    font-size: 14px;
+    font-size: $font_xSmall;
     text-align: center;
-    color: white;
+    color: $color_white;
     display: none;
   }
 
   &__link {
-    color: white;
+    color: $color_white;
   }
 }
