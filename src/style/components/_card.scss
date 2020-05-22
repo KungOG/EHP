@@ -1,10 +1,39 @@
 .card {
-  height: 65px;
+  /* height: 65px;
   width: 100%;
   background: $color_gold;
   border: transparent;
   outline: none;
-  margin-bottom: $space_xxxSmall;
+  margin-bottom: $space_xxxSmall; */
+
+  background: #ecce66;
+  border: transparent;
+  outline: none;
+
+  &:first-child {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+  }
+  &:nth-child(2) {
+    bottom: 25px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+  }
+  &:nth-child(3) {
+    right: 0;
+    top: 25px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+  }
 
   &:hover {
     background: $color_red;

@@ -39,7 +39,7 @@ const ProjectCard = ({ isActive }) => {
 
   return (
     <div className={[`project ${isActive ? "-active" : ""}`]}>
-      {example.map((item, key) => {
+      {/* {example.map((item, key) => {
         return (
           <Card
             key={item.id}
@@ -53,7 +53,15 @@ const ProjectCard = ({ isActive }) => {
             active={isActive && active === key}
           />
         );
-      })}
+      })} */}
+
+      <div className="container">
+        <div className="stage">
+          <div className="shape">
+            <div className="plane">1</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
