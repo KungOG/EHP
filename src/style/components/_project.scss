@@ -39,6 +39,9 @@
         transform-style: preserve-3d;
         animation: spin 8s infinite linear;
 
+        width: 200px;
+        height: 1px;
+
         .plane {
           position: absolute;
           height: 175px;
@@ -52,10 +55,42 @@
           background-color: rgba(255, 255, 255, 0.6);
           transition: transform 2s, opacity 2s;
           backface-visibility: hidden;
-          transform: translateZ(-200px);
 
-          .one {
+          &.one {
             transform: translateZ(380px);
+          }
+          &.two {
+            transform: rotateY(30deg) translateZ(380px);
+          }
+          &.three {
+            transform: rotateY(60deg) translateZ(380px);
+          }
+          &.four {
+            transform: rotateY(90deg) translateZ(380px);
+          }
+          &.five {
+            transform: rotateY(120deg) translateZ(380px);
+          }
+          &.six {
+            transform: rotateY(150deg) translateZ(380px);
+          }
+          &.seven {
+            transform: rotateY(180deg) translateZ(380px);
+          }
+          &.eight {
+            transform: rotateY(210deg) translateZ(380px);
+          }
+          &.nine {
+            transform: rotateY(-120deg) translateZ(380px);
+          }
+          &.ten {
+            transform: rotateY(-90deg) translateZ(380px);
+          }
+          &.eleven {
+            transform: rotateY(300deg) translateZ(380px);
+          }
+          &.twelve {
+            transform: rotateY(330deg) translateZ(380px);
           }
         }
       }

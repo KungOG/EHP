@@ -42,4 +42,4 @@ const ProfileSocials = () => {
 
 //ProfileSocials.propTypes = {};
 
-export default ProfileSocials;
+export { ProfileSocials };

@@ -16,4 +16,4 @@ const ProfileText = () => {
 
 //ProfileText.propTypes = {};
 
-export default ProfileText;
+export { ProfileText };

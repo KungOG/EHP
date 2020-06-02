@@ -18,4 +18,4 @@ ProfilePicture.propTypes = {
   ProfilePicture: PropTypes.string,
 };
 
-export default ProfilePicture;
+export { ProfilePicture };

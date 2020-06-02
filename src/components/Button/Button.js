@@ -17,4 +17,4 @@ const Button = ({ handleClick, isActive }) => {
   );
 };
 
-export default Button;
+export { Button };

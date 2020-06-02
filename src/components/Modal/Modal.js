@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import ProjectCard from "../ProjectCard/ProjectCard";
-import ProfilePicture from "../Profile/ProfilePicture";
-import ProfileText from "../Profile/ProfileText";
-import ProfileSocials from "../Profile/ProfileSocials";
-import Button from "../Button/Button";
+import { ProjectCard } from "../ProjectCard/ProjectCard";
+import { ProfilePicture } from "../Profile/ProfilePicture";
+import { ProfileText } from "../Profile/ProfileText";
+import { ProfileSocials } from "../Profile/ProfileSocials";
+import { Button } from "../Button/Button";
 //import Image from "../../img/image.jpg";
 import LogoType from "../../img/logotype.jpg";
 
@@ -35,4 +35,4 @@ const Modal = () => {
   );
 };
 
-export default Modal;
+export { Modal };
