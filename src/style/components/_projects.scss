@@ -1,0 +1,16 @@
+.projects {
+  transform: rotateY(180deg);
+  // overflow-y: scroll;
+  &.-show {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
